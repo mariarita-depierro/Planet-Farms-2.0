@@ -26,6 +26,13 @@
 /* -------------------------------
     Mobile First: da 0 a 767px
 ---------------------------------- */
+body,
+header,
+main,
+footer {
+  display: grid;
+}
+
 body {
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
@@ -45,12 +52,12 @@ footer {
 
 /* Header */
 header {
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
   padding: 0.5rem;
   .title {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
     gap: 1rem;
     .logo {
       margin: 0.5rem 0 0 0.5rem;
@@ -63,7 +70,7 @@ header {
   }
 
   #hamburger-menu {
-    margin-right: 1rem;
+    margin-left: 3rem;
     font-size: 2rem;
     color: var(--color-primary);
   }
@@ -73,19 +80,13 @@ header {
     display: none;
     &.show-navbar {
       display: flex;
+      justify-self: end;
     }
     ul {
       background-color: var(--color-white);
       li {
-        margin: 1rem;
+        margin-block: 2.5rem;
       }
-    }
-
-    a {
-      display: block;
-      width: 26rem;
-      font-size: 1rem;
-      font-weight: bold;
     }
   }
 }
@@ -141,47 +142,10 @@ main {
     display: flex;
     margin: 1.25rem 1rem;
     padding: 1.25rem 1rem;
-    min-height: 20rem;
     font-weight: bold;
     border-radius: 0.3rem;
     color: var(--color-text-dark);
     background-color: var(--color-white);
-  }
-  .paragraph-1 {
-    span {
-      display: flex;
-      gap: 0.5rem;
-      font-weight: bolder;
-      color: var(--color-primary);
-
-      img {
-        width: auto;
-        height: 20px;
-      }
-    }
-    .img-interactive {
-      img {
-        width: auto;
-        height: 100px;
-        border-radius: 8px;
-        &#swipe-img {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  .click-up {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .paragraph-2 {
-    img {
-      width: 120px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
   }
 }
 
@@ -219,11 +183,4 @@ footer {
       color: var(--color-text-muted);
     }
   }
-}
-
-body,
-header,
-main,
-footer {
-  display: grid;
 }
