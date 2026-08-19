@@ -19,7 +19,7 @@
 
   /* Neutrali / Sfondi */
   --color-white: #fff; /* Bianco puro per card, header e footer*/
-  --color-text-dark: #1f2937; /* Testo principale scuro */
+  --color-dark: #1f2937; /* Testo principale scuro */
   --color-text-muted: #6b7280; /* Grigio neutro per P.IVA, date, note e caption */
 }
 
@@ -135,8 +135,6 @@ a {
 
 /* Main */
 main {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
   background-color: var(--color-primary);
   section {
     display: flex;
@@ -144,7 +142,7 @@ main {
     padding: 1.25rem 1rem;
     font-weight: bold;
     border-radius: 0.3rem;
-    color: var(--color-text-dark);
+    color: var(--color-dark);
     background-color: var(--color-white);
   }
 }
@@ -169,11 +167,11 @@ footer {
   }
   a {
     &:link {
-      color: var(--color-text-dark);
+      color: var(--color-dark);
     }
 
     &:visited {
-      color: var(--color-text-dark);
+      color: var(--color-dark);
     }
   }
 
