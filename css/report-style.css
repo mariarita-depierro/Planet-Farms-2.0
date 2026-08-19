@@ -1,0 +1,129 @@
+/* -------------------------------
+    Mobile First: da 0 a 767px
+---------------------------------- */
+header {
+  ul {
+    margin-right: 0.8rem;
+
+    /* -------------
+        Dark Mode
+    ---------------- */
+    .dark-mode {
+      justify-self: center;
+      border: 3px solid var(--color-primary);
+      border-radius: 30px;
+      box-shadow: 0 5px 0 #0f2b0f;
+      cursor: pointer;
+
+      &:hover {
+        border: 3px solid var(--color-accent);
+      }
+
+      div {
+        padding: 8px;
+        border-radius: 30px;
+        color: #fff;
+        background-color: var(--color-primary);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  grid-template-rows: 1fr;
+  .table-report {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    article {
+      p {
+        margin-bottom: 1rem;
+        width: 10rem;
+      }
+    }
+
+    .download {
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-top: 24px;
+    }
+  }
+
+  button {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-primary);
+
+    a {
+      color: var(--color-white);
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+/* Implementazione Dark Theme: ottimizzazione del contrasto per la
+ riduzione dell'affaticamento visivo in condizioni di scarsa luminosità. */
+body.dark-theme {
+  header,
+  main,
+  footer,
+  section,
+  ul {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+  }
+
+  main {
+    border: 2px solid var(--color-white);
+  }
+
+  h1,
+  h2,
+  h3,
+  a,
+  i,
+  p,
+  #hamburger-menu {
+    color: var(--color-white);
+  }
+
+  p {
+    font-weight: normal;
+  }
+}
+
+/* --------------------------
+    Feedback per il download
+----------------------------- */
+.download-message {
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  border: 2px solid var(--color-white);
+  border-radius: 8px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.close-message {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-message:hover {
+  color: var(--color-accent);
+}
